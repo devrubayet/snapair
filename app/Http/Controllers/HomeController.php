@@ -15,4 +15,8 @@ class HomeController extends Controller
         $testimonials = Testimonial::all();
         return view('home', compact('offers','airlines','testimonials'));
     }
+
+    function about(){
+        return view('frontend.pages.about');
+    }
 }

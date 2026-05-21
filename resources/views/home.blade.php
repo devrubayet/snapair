@@ -23,45 +23,23 @@
     <!-- hero section -->
     <section class="relative bg-gray-100">
         <div class="herro-wrapper absolute top-0 left-0 right-0 bottom-0 max-h-85.5">
-            <div class="overlaping absolute top-0 bottom-0 left-0 right-0 z-10"></div>
-            <video class="block bg-cover bg-no-repeat bg-center relative w-full h-full object-cover object-center z-1"
+            <div class="overlaping absolute top-0 bottom-0 left-0 right-0 z-10 "></div>
+            <video class="block bg-cover bg-no-repeat bg-center saturate-200  relative w-full h-full object-cover object-center z-1"
                 src="https://www.pexels.com/download/video/29713296/" type=" video/mp4" muted loop autoplay></video>
         </div>
         <div class="content max-w-7xl pt-17.5 md:pt-37.5 pb-15 px-4 w-full mx-auto my-0 relative z-10">
             <div class="title flex flex-col gap-3 mb-8">
                 <div class="title">
-                    <h1 class="text-white -tracking-wide text-3xl md:text-4xl leading-[48px] font-bold mb-4">
+                    <h1 class="text-white -tracking-wide text-3xl md:text-4xl leading-[48px] font-semibold mb-4">
                         Welcome To
-                        <strong class="font-bold text-4xl md:text-6xl">SnapAir</strong>
+                        <strong class="font-semibold italic text-4xl md:text-5xl">SnapAir</strong>
                     </h1>
                 </div>
                 <div class="description text-white font-normal leading-6 text-lg m-0 p-0">
                     <p>Find Flights, Hotels, Visa & Holidays</p>
                 </div>
             </div>
-            <div class="tracking-card bg-white w-full border rounded-md px-10 pb-10 pt-5">
-                <div class="relative isolate ease-[all 0.3s]">
-                    <p class="md:text-3xl text-lg font-bold mb-4">
-                        Retrive Your Passport here
-                    </p>
-                    <label for="reference_number" class="font-medium">Reference Number</label>
-
-                    <form class="flex flex-col md:flex-row gap-4" action="">
-                        <!-- Input -->
-                        <div class="input-group flex flex-col w-full md:w-5/6">
-                            <input class="w-full border rounded-md px-4 py-3 outline-indigo-400" type="text"
-                                id="reference_number" name="reference_number" placeholder="Enter Your Reference Number" />
-                        </div>
-
-                        <!-- Button -->
-                        <div class="input-group md:w-1/6">
-                            <input onclick="openModal()"
-                                class="w-full h-full border rounded-md bg-indigo-500 px-3 py-2 text-white text-xl font-bold cursor-pointer hover:bg-indigo-600 transition"
-                                type="button" value="Track" />
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <x-frontend.visatrack-card/>
         </div>
     </section>
 
@@ -83,7 +61,7 @@
 
                                         <!-- Indigo Slide-up Overlay -->
                                         <div
-                                            class="absolute inset-0 bg-indigo-500 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out px-5 py-4 flex flex-col justify-center">
+                                            class="absolute inset-0 bg-indigo-900 text-white translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out px-5 py-4 flex flex-col justify-center">
                                             <!-- LEFT TOP SVG -->
                                             <div class="absolute top-0 left-0">
                                                 <svg width="133" height="108" viewBox="0 0 133 108" fill="none"
@@ -217,7 +195,7 @@
                 <div class="swiper testimonialSwiper  w-full">
                     <div class="swiper-wrapper">
                         @foreach ($testimonials as $testimonial)
-                            <x-testimonial-card :testimonial="$testimonial" />
+                            <x-frontend.testimonial-card :testimonial="$testimonial" />
                         @endforeach
 
 
@@ -232,88 +210,5 @@
 
 
     <!-- fotter -->
-    <section>
-        <footer class="relative text-gray-800">
-            <!-- Background Pattern -->
-            <div style="background-image: url('./img/bgp.png');"
-                class="absolute inset-1 bg-no-repeat  md:bg-repeat   bg-bottom bg-contain opacity-30"></div>
-
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(30,27,75,0.5)]"></div>
-
-            <!-- Content -->
-            <div
-                class="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 text-sm">
-
-                <!-- Column 1 -->
-                <div>
-                    <h3 class="text-purple-800 font-semibold mb-4 uppercase tracking-wide">About Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-purple-700">About SnapAir</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Trade License No:
-                                {{ $settings->trade_license }}</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Civil Aviation Certificate No:
-                                <b>{{ $settings->civil_no }}</b></a></li>
-
-                    </ul>
-                </div>
-
-                <!-- Column 2 -->
-                <div>
-                    <h3 class="text-purple-800 font-semibold mb-4 uppercase tracking-wide">Book & Manage</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-purple-700">Visa Track</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Visa Reservation Schedule</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3 -->
-                <div>
-                    <h3 class="text-purple-800 font-semibold mb-4 uppercase tracking-wide">Where We Offer</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-purple-700">Route Map</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Partner Airlines</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Popular Flights</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4 -->
-                <div>
-                    <h3 class="text-purple-800 font-semibold mb-4 uppercase tracking-wide">Prepare To Travel</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-purple-700">Baggage Guidelines</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Airport Information</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Travel Tips</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Medical Assistance</a></li>
-                        <li><a href="#" class="hover:text-purple-700">Travelling with Pets</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 5 (App Section) -->
-                <div>
-                    <h3 class="text-purple-800 font-semibold mb-4 uppercase tracking-wide">SnapAirBD</h3>
-                    <p class="mb-4 text-gray-600"> book and manage flights on the go.</p>
-                    <div class="space-y-3">
-                        <img src="img/add.png" class="h-10" alt="App Store">
-                        <img src="img/add.png" class="h-10" alt="Google Play">
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Bottom Bar -->
-            <div class="relative border-t border-gray-300 mt-10">
-                <div
-                    class="max-w-7xl mx-auto px-6 py-6 text-xs text-white flex flex-col md:flex-row justify-between gap-4">
-                    <p>© 2026 Your Airline. All Rights Reserved.</p>
-                    <div class="flex gap-6">
-                        <a href="#" class="hover:text-purple-700">Privacy Policy</a>
-                        <a href="#" class="hover:text-purple-700">Terms of Service</a>
-                        <a href="#" class="hover:text-purple-700">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </section>
+    
 @endsection

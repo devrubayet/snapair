@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AdminDashboardController extends Controller
 {
     function index(){
-        $sliderCount = Testimonial::count();
-        return view('admin.dashboard',compact('sliderCount'));
+        $feedbackCount = Testimonial::count();
+        return view('admin.dashboard',compact('feedbackCount'));
     }
 }

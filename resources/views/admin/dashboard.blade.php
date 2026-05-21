@@ -10,7 +10,7 @@
         </div>
         <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
 
-            <x-admin.card title="Feedback" :count="$sliderCount" :link="route('all-slider')" color="blue" icon="mdi-image-multiple" />
+            <x-admin.card title="Feedback" :count="$feedbackCount" :link="route('all-testi')" color="blue" icon="mdi-image-multiple" />
 
         </div>
     </div>

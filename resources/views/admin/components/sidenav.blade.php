@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         <a class="sidebar-brand brand-logo" href="{{ route('admin.dashboard') }}">
-            <img class="img-fluid w-100 h-100" src="{{ asset('storage/' . $settings->logo) }}" alt="logo" />
+            <img class="img-fluid " src="{{ asset('admin-end/assets/favicon_io/favicon-32x32.png') }}" alt="logo" />
         </a>
         <a class="sidebar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}">
             <img class="img-fluid w-100" src="{{ asset('admin-end/assets/favicon_io/favicon-32x32.png') }}" alt="logo" />

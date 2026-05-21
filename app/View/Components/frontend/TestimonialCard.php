@@ -23,6 +23,6 @@ class TestimonialCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.testimonial-card');
+        return view('components.frontend.testimonial-card');
     }
 }
